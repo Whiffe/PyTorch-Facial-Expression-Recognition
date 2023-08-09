@@ -104,8 +104,8 @@ class Predictor(inference.Inference):
     def show_image(self, image, dets, pred_score, pred_index, use_rgb=True, delay=0, vis=True):
         image = image_utils.draw_image_detection_bboxes(image, dets, pred_score, pred_index,
                                                         class_name=self.class_name, fontScale=-1)
-        if vis:
-            image_utils.cv_show_image("det-result", image, use_rgb=use_rgb, delay=delay)
+        # if vis:
+        #    image_utils.cv_show_image("det-result", image, use_rgb=use_rgb, delay=delay)
         return image
 
 
