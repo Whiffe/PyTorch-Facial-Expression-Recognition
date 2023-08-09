@@ -1,0 +1,46 @@
+batch_size: 128
+class_name: data/class_name.txt
+config_file: configs/config.yaml
+distributed: false
+finetune: false
+gpu_id:
+- 0
+input_size:
+- 112
+- 112
+log_freq: 50
+log_root: work_space/mobilenet_v2_1.0_CrossEntropyLoss_20230313090258/log
+loss_type: CrossEntropyLoss
+lr: 0.01
+milestones:
+- 20
+- 50
+- 80
+model_root: work_space/mobilenet_v2_1.0_CrossEntropyLoss_20230313090258/model
+momentum: 0.9
+net_type: mobilenet_v2
+num_epochs: 100
+num_warn_up: 3
+num_workers: 8
+optim_type: SGD
+pretrained: true
+progress: true
+rgb_mean:
+- 0.5
+- 0.5
+- 0.5
+rgb_std:
+- 0.5
+- 0.5
+- 0.5
+scheduler: multi-step
+test_data:
+- /home/dm/nasdata/dataset/csdn/emotion/emotion-domestic/test
+test_transform: val
+train_data:
+- /home/dm/nasdata/dataset/csdn/emotion/emotion-domestic/train
+- /home/dm/nasdata/dataset/csdn/emotion/MMAFEDB/train
+train_transform: train
+weight_decay: 0.0005
+width_mult: 1.0
+work_dir: work_space/mobilenet_v2_1.0_CrossEntropyLoss_20230313090258
